@@ -1,0 +1,33 @@
+# Project: Dr Salud
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe -D__DEBUG__
+CC   = gcc.exe -D__DEBUG__
+WINDRES = windres.exe
+RES  = Dr_Salud_private.res
+OBJ  = "Dr\ Salud.o" $(RES)
+LINKOBJ  = "Dr Salud.o" $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  -g3 
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = "Dr Salud.exe"
+CXXFLAGS = $(CXXINCS)   -g3
+CFLAGS = $(INCS)   -g3
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before "Dr Salud.exe" all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "Dr Salud.exe" $(LIBS)
+
+"Dr\ Salud.o": Dr\ Salud.cpp
+	$(CPP) -c "Dr Salud.cpp" -o "Dr Salud.o" $(CXXFLAGS)
+
+Dr_Salud_private.res: Dr_Salud_private.rc 
+	$(WINDRES) -i Dr_Salud_private.rc --input-format=rc -o Dr_Salud_private.res -O coff 
