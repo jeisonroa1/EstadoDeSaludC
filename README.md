@@ -1,0 +1,2 @@
+# EstadoDeSaludC
+Programa básico en C para conocer: Si el peso actual de una persona es saludable segun segun el IMC (Indice de masa corporal).     Realizar una planeación de dieta para alcanzar un peso deseado.  Realizar una planeación de ejercicio para alcanzar un peso deseado. Realizar el calculo de la frecuencia cardíaca máxima. Conocer cual es el riesgo de un Accidente Vascular Cerebral en los proximos 10 años.
